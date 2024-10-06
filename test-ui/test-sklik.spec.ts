@@ -1,15 +1,14 @@
 import { expect } from "@playwright/test";
 import { test } from "./coverage_wrapper";
 
-
 test("login", async ({ page }) => {
-  await page.goto("https://www.sklik.cz", {timeout : 3000});
+  await page.goto("https://www.sklik.cz", { timeout: 3000 });
   const logo = page.locator(".login");
   await expect(logo).toBeVisible();
 });
 
 test("help", async ({ page }) => {
-  await page.goto("https://www.sklik.cz", {timeout : 3000});
+  await page.goto("https://www.sklik.cz", { timeout: 3000 });
   const help = page.locator("#nav > a").getByText("Nápověda");
   await help.click();
   await expect(page).toHaveURL("https://napoveda.sklik.cz/");
@@ -18,7 +17,7 @@ test("help", async ({ page }) => {
 });
 
 test("partner", async ({ page }) => {
-  await page.goto("https://www.sklik.cz", {timeout : 3000});
+  await page.goto("https://www.sklik.cz", { timeout: 3000 });
   const help = page.locator("#nav > a").getByText("Partner");
   await help.click();
   await expect(page).toHaveURL("https://partner.seznam.cz/");
@@ -29,7 +28,7 @@ test("partner", async ({ page }) => {
 });
 
 test("faq", async ({ page }) => {
-  await page.goto("https://www.sklik.cz", {timeout : 3000});
+  await page.goto("https://www.sklik.cz", { timeout: 3000 });
   const help = page.locator("#nav > a").getByText("Nápověda");
   await help.click();
   await expect(page).toHaveURL("https://napoveda.sklik.cz/");

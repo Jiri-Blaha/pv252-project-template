@@ -5,5 +5,7 @@ test("fibonacci-5", () => {
 });
 
 test("fibonacci-negative", () => {
-  expect(() => fibonacci(-10)).toThrow(Error("Cannot compute on negative numbers"));
+  expect(() => fibonacci(-10)).toThrow(
+    Error("Cannot compute on negative numbers"),
+  );
 });

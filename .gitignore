@@ -8,6 +8,7 @@ coverage-ui
 coverage-unit
 coverage-total
 .nyc_output
+.idea
 
 # macos temp files
 .DS_Store
